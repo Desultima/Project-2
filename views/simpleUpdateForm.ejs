@@ -1,0 +1,29 @@
+<% include header %>
+<form method="POST" action=""/user/edituser2"">
+    <table id="login">
+    
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="hidden" id="PersonID" name="PersonID" value="<%=rs[0].PersonID%>" /></td>
+        </tr>
+
+	<tr><td>Money:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="money" name="money" value="<%=rs[0].Money%>" /></td>
+        </tr>
+
+        <tr><td>FirstName:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="firstname" name="firstname" value="<%=rs[0].FirstName%>" /></td>
+        </tr>
+        <tr><td>LastName:</td>
+            <td><input type="text" id="lastname" name="lastname" value="<%=rs[0].LastName%>" /></td>
+        </tr>
+        <tr><td>StateOfResidence:</td>
+            <td><input type="text" id="stateofresidence" name="stateofresidence" value="<%=rs[0].StateOfResidence%>" /></td>
+        </tr>
+
+    </table>
+    <input type="submit">
+</form>
+
+<% include footer %>

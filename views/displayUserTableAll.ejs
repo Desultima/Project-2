@@ -1,0 +1,23 @@
+<% include header %>
+
+<h1>TOP 10 WEALTHIEST PEOPLE ON SITE</h1>
+   <% if(rs.length > 0) { %>
+    <table border="2" style="width:100%">
+	<tr>
+		<th>Money</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+	</tr>
+	<% for (var i=0; rs.length > i; i++) { %>
+	  	<tr>
+             <td><%= rs[i].Money %></td>
+             <td><%= rs[i].FirstName %></td>
+            <td><%= rs[i].LastName %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+         No users are entered into the database.
+    <% } %>
+
+<% include footer %>
